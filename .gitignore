@@ -1,24 +1,36 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
 # Package Files #
 *.jar
 *.war
-*.nar
 *.ear
-*.zip
-*.tar.gz
-*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-replay_pid*
+
+# ibas packages
+*/src/main/webapp/3rdparty/ibas
+*/src/main/webapp/3rdparty/openui5
+*/src/main/webapp/3rdparty/shell
+*/src/main/webapp/modules/
+
+# files
+*_log_*.txt
+*.tmp
+*.class
+*.js
+*.glf
+*.map
+*.d.ts
+
+# mac os files
+.DS_Store
+
+# work folder
+*/target/
+*/release/
+*/.vs/
+*/.vscode/
+*/.metadata/
+*/.recommenders/
+*/RemoteSystemsTempFiles/
+*/Servers/
+/target/

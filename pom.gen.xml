@@ -1,0 +1,173 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sap.byd</groupId>
+	<artifactId>bydesign.client</artifactId>
+	<version>0.1.0</version>
+	<packaging>jar</packaging>
+	<name>sap.bydesign.client</name>
+	<url>https://avacloud.com.cn/sap/bydesign/client/</url>
+	<organization>
+		<name>AVA Cloud</name>
+		<url>https://avacloud.com.cn</url>
+	</organization>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<build>
+		<plugins>
+			<!-- Axis2代码生成插件 -->
+			<plugin>
+				<groupId>org.apache.axis2</groupId>
+				<artifactId>axis2-wsdl2code-maven-plugin</artifactId>
+				<version>1.8.2</version>
+				<executions>
+					<execution>
+						<id>ws-01</id>
+						<!-- 绑定到 generate-sources 阶段 -->
+						<phase>generate-sources</phase>
+						<goals>
+							<!-- 使用新目标名称 -->
+							<goal>generate-sources</goal>
+						</goals>
+						<configuration>
+							<!-- WSDL文件路径（本地或远程） -->
+							<wsdlFile>src/main/resources/wsdl/ManageIdentifiedStocksIn.wsdl</wsdlFile>
+							<!-- 生成的包名 -->
+							<packageName>com.sap.bydesign.client.manageidentifiedstocksin</packageName>
+							<!-- 数据绑定方式（adb或xmlbeans） -->
+							<databindingName>xmlbeans</databindingName>
+							<!-- 代码输出路径 -->
+							<outputDirectory>src/main/</outputDirectory>
+							<targetSourceFolderLocation>../main/java/</targetSourceFolderLocation>
+							<targetResourcesFolderLocation></targetResourcesFolderLocation>
+							<generateServerSide>false</generateServerSide>
+							<overWrite>true</overWrite>
+							<skipBuildXML>true</skipBuildXML>
+						</configuration>
+					</execution>
+					<execution>
+						<id>ws-02</id>
+						<!-- 绑定到 generate-sources 阶段 -->
+						<phase>generate-sources</phase>
+						<goals>
+							<!-- 使用新目标名称 -->
+							<goal>generate-sources</goal>
+						</goals>
+						<configuration>
+							<!-- WSDL文件路径（本地或远程） -->
+							<wsdlFile>src/main/resources/wsdl/ManageProductionLotsIn.wsdl</wsdlFile>
+							<!-- 生成的包名 -->
+							<packageName>com.sap.bydesign.client.manageproductionlotsin</packageName>
+							<!-- 数据绑定方式（adb或xmlbeans） -->
+							<databindingName>xmlbeans</databindingName>
+							<!-- 代码输出路径 -->
+							<outputDirectory>src/main/</outputDirectory>
+							<targetSourceFolderLocation>../main/java/</targetSourceFolderLocation>
+							<targetResourcesFolderLocation></targetResourcesFolderLocation>
+							<generateServerSide>false</generateServerSide>
+							<overWrite>true</overWrite>
+							<skipBuildXML>true</skipBuildXML>
+						</configuration>
+					</execution>
+					<execution>
+						<id>ws-03</id>
+						<!-- 绑定到 generate-sources 阶段 -->
+						<phase>generate-sources</phase>
+						<goals>
+							<!-- 使用新目标名称 -->
+							<goal>generate-sources</goal>
+						</goals>
+						<configuration>
+							<!-- WSDL文件路径（本地或远程） -->
+							<wsdlFile>src/main/resources/wsdl/QueryIdentifiedStocksIn.wsdl</wsdlFile>
+							<!-- 生成的包名 -->
+							<packageName>com.sap.bydesign.client.queryidentifiedstocksin</packageName>
+							<!-- 数据绑定方式（adb或xmlbeans） -->
+							<databindingName>xmlbeans</databindingName>
+							<!-- 代码输出路径 -->
+							<outputDirectory>src/main/</outputDirectory>
+							<targetSourceFolderLocation>../main/java/</targetSourceFolderLocation>
+							<targetResourcesFolderLocation></targetResourcesFolderLocation>
+							<generateServerSide>false</generateServerSide>
+							<overWrite>true</overWrite>
+							<skipBuildXML>true</skipBuildXML>
+						</configuration>
+					</execution>
+					<execution>
+						<id>ws-04</id>
+						<!-- 绑定到 generate-sources 阶段 -->
+						<phase>generate-sources</phase>
+						<goals>
+							<!-- 使用新目标名称 -->
+							<goal>generate-sources</goal>
+						</goals>
+						<configuration>
+							<!-- WSDL文件路径（本地或远程） -->
+							<wsdlFile>src/main/resources/wsdl/QueryMaterialIn.wsdl</wsdlFile>
+							<!-- 生成的包名 -->
+							<packageName>com.sap.bydesign.client.querymaterialin</packageName>
+							<!-- 数据绑定方式（adb或xmlbeans） -->
+							<databindingName>xmlbeans</databindingName>
+							<!-- 代码输出路径 -->
+							<outputDirectory>src/main/</outputDirectory>
+							<targetSourceFolderLocation>../main/java/</targetSourceFolderLocation>
+							<targetResourcesFolderLocation></targetResourcesFolderLocation>
+							<generateServerSide>false</generateServerSide>
+							<overWrite>true</overWrite>
+							<skipBuildXML>true</skipBuildXML>
+						</configuration>
+					</execution>
+					<execution>
+						<id>ws-05</id>
+						<!-- 绑定到 generate-sources 阶段 -->
+						<phase>generate-sources</phase>
+						<goals>
+							<!-- 使用新目标名称 -->
+							<goal>generate-sources</goal>
+						</goals>
+						<configuration>
+							<!-- WSDL文件路径（本地或远程） -->
+							<wsdlFile>src/main/resources/wsdl/QueryProductionLotISIIn.wsdl</wsdlFile>
+							<!-- 生成的包名 -->
+							<packageName>com.sap.bydesign.client.queryproductionlotisiin</packageName>
+							<!-- 数据绑定方式（adb或xmlbeans） -->
+							<databindingName>xmlbeans</databindingName>
+							<!-- 代码输出路径 -->
+							<outputDirectory>src/main/</outputDirectory>
+							<targetSourceFolderLocation>../main/java/</targetSourceFolderLocation>
+							<targetResourcesFolderLocation></targetResourcesFolderLocation>
+							<generateServerSide>false</generateServerSide>
+							<overWrite>true</overWrite>
+							<skipBuildXML>true</skipBuildXML>
+						</configuration>
+					</execution>
+					<execution>
+						<id>ws-06</id>
+						<!-- 绑定到 generate-sources 阶段 -->
+						<phase>generate-sources</phase>
+						<goals>
+							<!-- 使用新目标名称 -->
+							<goal>generate-sources</goal>
+						</goals>
+						<configuration>
+							<!-- WSDL文件路径（本地或远程） -->
+							<wsdlFile>src/main/resources/wsdl/QuerySiteLogisticsTaskIn.wsdl</wsdlFile>
+							<!-- 生成的包名 -->
+							<packageName>com.sap.bydesign.client.querysitelogisticstaskin</packageName>
+							<!-- 数据绑定方式（adb或xmlbeans） -->
+							<databindingName>xmlbeans</databindingName>
+							<!-- 代码输出路径 -->
+							<outputDirectory>src/main/</outputDirectory>
+							<targetSourceFolderLocation>../main/java/</targetSourceFolderLocation>
+							<targetResourcesFolderLocation></targetResourcesFolderLocation>
+							<generateServerSide>false</generateServerSide>
+							<overWrite>true</overWrite>
+							<skipBuildXML>true</skipBuildXML>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
